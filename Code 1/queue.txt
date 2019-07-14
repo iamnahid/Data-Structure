@@ -1,0 +1,109 @@
+//#include<iostream>
+//using namespace std;
+//
+//#define MAXQUEUE  5
+//
+//struct QueueRec
+//{
+//   int    count;
+//   int    front;
+//   int    rear;
+//   float  entry[MAXQUEUE];
+//};
+//
+//typedef struct QueueRec Queue;
+//
+//void initializeQueue(Queue* queuePtr)
+//{
+//    queuePtr -> count = 0;
+//    queuePtr -> front = 0;
+//    queuePtr -> rear = MAXQUEUE-1;
+//}
+//
+//bool queueEmpty(const Queue* queuePtr)
+//{
+//   if (queuePtr->count <= 0) 
+//   {
+//     return true;
+//   }
+//   else 
+//   {
+//     return false;
+//   }
+//}
+//
+//bool queueFull(Queue* queuePtr)
+//{
+//   if (queuePtr->count >= MAXQUEUE) 
+//   {
+//     return true;
+//   }
+//   else 
+//   {
+//     return false;
+//   }
+//}
+//
+//void enqueue(Queue* queuePtr, float item)
+//{
+//   if (queueFull(queuePtr)) 
+//   {
+//     printf("Queue is full\n");
+//     return;
+//   }
+//   else 
+//   {
+//     queuePtr->rear++; 
+//     if (queuePtr->rear == MAXQUEUE)
+//     {
+//       queuePtr->rear = 0;
+//     }
+//     queuePtr->entry[queuePtr->rear] = item;
+//     queuePtr->count++;
+//   }
+//}
+//
+//float dequeue(Queue* queuePtr)
+//{
+//  float item;
+//
+//  if (queueEmpty(queuePtr))  {
+//    printf("Queue is empty\n");
+//    return -1;
+//  }
+//  else {
+//    item = queuePtr->entry[queuePtr->front];
+//    queuePtr->front++;
+//    if (queuePtr->front == MAXQUEUE)
+//    {
+//      queuePtr->front = 0;
+//    } 
+//    queuePtr->count--;
+//  }
+//  return item;
+//}
+//
+//void main() {
+//	Queue queue;
+//	initializeQueue(&queue);
+//
+//	enqueue(&queue, 1);
+//	enqueue(&queue, 2);
+//	enqueue(&queue, 3);
+//
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//
+//	enqueue(&queue, 4);
+//	enqueue(&queue, 5);
+//	enqueue(&queue, 6);
+//	enqueue(&queue, 7);
+//	enqueue(&queue, 8);
+//
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//	cout << dequeue(&queue) << endl;
+//}

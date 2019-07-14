@@ -1,0 +1,86 @@
+#include<stdio.h>
+
+#define SIZE 5
+
+void input(int arr[]);
+void print(int arr[]);
+int sum(int arr[]);
+int min(int arr[]);
+int max(int arr[]);
+void sort(int arr[]);
+void swap(int &x, int &y); 
+
+void input(int arr[])
+{
+	for(int i=0; i<SIZE; i++)
+		scanf("%d", &arr[i]);
+}
+
+void print(int arr[])
+{
+	for(int i=0; i<SIZE; i++)
+		printf("%d ", arr[i]);
+
+	printf("\n");
+}
+
+int sum(int arr[])
+{
+	int s=0;
+	for(int i=0; i<SIZE; i++)
+		s += arr[i];
+
+	return s;
+}
+
+int min(int arr[])
+{
+	int m=arr[0];
+	for(int i=1; i<SIZE; i++)
+	{
+		if(arr[i] < m)
+			m = arr[i];
+	}
+
+	return m;
+}
+
+int max(int arr[])
+{
+	int m=arr[0];
+	for(int i=1; i<SIZE; i++)
+	{
+		if(arr[i] > m)
+			m = arr[i];
+	}
+
+	return m;
+}
+
+void sort(int arr[])
+{
+	for(int i=0; i<SIZE-1; i++)
+	{
+		j=i;
+		while(j>0 && arr[j-1] > arr[j])
+		{
+			swap(arr[j-1], arr[j]);
+			j--;
+		}
+	}
+}
+
+void swap(int &x, int &y) 
+{
+	int temp;
+	temp = x;
+	y = x;
+	x = y;
+}
+
+int main() 
+{
+	int arr[SIZE];
+
+	return 0;
+}

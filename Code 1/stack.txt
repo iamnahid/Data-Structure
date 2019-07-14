@@ -1,0 +1,91 @@
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//#define MAXSTACK  5
+//
+//struct StackRec
+//{
+//   int   top;
+//   float  entry[MAXSTACK];
+//};
+//
+//typedef struct StackRec Stack;
+//
+//void initializeStack(Stack* stackPtr)
+//{
+//    stackPtr -> top = -1;
+//}
+//bool stackEmpty(const Stack* stackPtr)
+//{
+//   if (stackPtr-> top < 0) 
+//   {
+//      return true;
+//   }
+//   else
+//   {
+//      return false;
+//   }
+//}
+//bool stackFull(const Stack* stackPtr)
+//{
+//   if (stackPtr -> top >= MAXSTACK-1) 
+//   {
+//      return true;
+//   }
+//   else 
+//   {
+//      return false;
+//   }
+//}
+//
+//void push(Stack* stackPtr, float item)
+//{
+//   if (stackFull(stackPtr)) 
+//   {
+//     fprintf(stderr, "Stack is full\n");
+//     exit(1);
+//   }
+//   else 
+//   {
+//     stackPtr-> top++;
+//     stackPtr-> entry[stackPtr-> top] = item;
+//   }
+//}
+//
+//float pop(Stack* stackPtr)
+//{
+//   float item;
+//
+//   if (stackEmpty(stackPtr))
+//   {
+//      fprintf(stderr, "Stack is empty\n");
+//      exit(1);
+//   }
+//   else 
+//   {
+//      item = stackPtr-> entry[stackPtr-> top];
+//      stackPtr-> top--;
+//   }
+//
+//   return item;
+//}
+//
+//
+//int main()
+//{
+//   Stack  theStack;
+//   float  next;
+//
+//   initializeStack(&theStack);
+//   printf("Enter number sequence: ");
+//   while (scanf("%f", &next) != EOF) {
+//      if (!stackFull(&theStack)) {
+//         push(&theStack, next);
+//      }
+//   }
+//   while (!stackEmpty(&theStack)) {
+//      next = pop(&theStack);
+//      printf("%f", next);
+//   }
+//   printf("\n");
+//}
